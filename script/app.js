@@ -1,10 +1,3 @@
-// $(document).ready(function(){
-// 	$(document).on('click', '.showContent', function(){
-// 		$(this).next('.hiddenContent').slideToggle(200);
-// 		$(this).toggleClass('showOn');
-// 	});
-// });
-
 (function(){
 	var resumeApp = angular.module('resumeApp', []);
 
