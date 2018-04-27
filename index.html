@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="resumeApp" ng-controller="resumeCtrl">
+<head>
+	<meta charset="UTF-8">
+	<title>Matt Wojas Resume</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Description" content="Matt Wojas Developer Resume, Professionail Experience, Front End, Full Stack">
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css">	 -->
+	<!-- <link rel="stylesheet" href="css/styles.css">	 -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Arvo:400,400i" rel="stylesheet">  -->
+	<style>
+	h1,h2,h3,h4,h5,h6,p{text-rendering:optimizeLegibility}a,b,em,i,small,strong{line-height:inherit}.row,hr{max-width:75rem}.clear,.row:after,hr{clear:both}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;box-sizing:border-box;font-size:100%}main{display:block}*,:after,:before{box-sizing:inherit}body{padding:0;background:#fefefe;font-weight:400;color:#0a0a0a;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.row{margin-right:auto;margin-left:auto}.row:after,.row:before{display:table;content:" "}.site .title,article,aside,footer,header,nav,section{display:block}.column,.columns{width:100%;float:left;padding-right:.625rem;padding-left:.625rem}.column:last-child:not(:first-child),.columns:last-child:not(:first-child){float:right}.column.end:last-child:last-child,.end.columns:last-child:last-child{float:left}.small-12{width:100%}@media print,screen and (min-width:40em){.column,.columns{padding-right:.9375rem;padding-left:.9375rem}.medium-4{width:33.33333%}.medium-6{width:50%}}@media print,screen and (min-width:64em){.large-3{width:25%}}blockquote,dd,div,dl,dt,form,h1,h2,h3,h4,h5,h6,li,ol,p,pre,td,th,ul{margin:0;padding:0}h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:.5rem}dl,ol,p,ul{margin-bottom:1rem;line-height:1.6}p{font-size:inherit}em,i{font-style:italic}b,strong{font-weight:700}small{font-size:80%}h1,h2,h3,h4,h5,h6{font-family:Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;font-style:normal;font-weight:400;color:inherit}h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{line-height:0;color:#cacaca}h5{font-size:1.0625rem}h5,h6{line-height:1.4}h6{font-size:1rem}@media print,screen and (min-width:40em){h1{font-size:3rem}h2{font-size:2.5rem}h3{font-size:1.9375rem}h4{font-size:1.5625rem}h5{font-size:1.25rem}h6{font-size:1rem}}a{color:#1779ba;text-decoration:none;cursor:pointer}a:focus,a:hover{color:#1468a0}a img{border:0}hr{height:0;margin:1.25rem auto;border-top:0;border-right:0;border-bottom:1px solid #cacaca;border-left:0}dl,ol,ul{list-style-position:outside}li{font-size:inherit}ul{list-style-type:disc}ol,ul{margin-left:1.25rem}body{margin:0;padding-bottom:30px}body,h3,h4{font-family:Lato,sans-serif;font-size:16px;line-height:18px}h1,h2{font-family:Arvo,sans-serif}h1{margin:.67em 0;font-size:34px;line-height:38px}h2{font-size:26px;line-height:28px}h3{font-size:22px;line-height:26px;padding-bottom:6px}h4{font-size:18px;line-height:22px}header{border-bottom:2px solid #ccc}.spacedVertUp{padding-top:20px}.spacedVertDown{padding-bottom:20px}.contactInfo{text-align:right}.contactInfo div{float:right;padding-right:10px}@media (max-width:600px){.contactInfo{text-align:left}.contactInfo div{float:left}}.contactInfo .email{float:none;clear:both}.Item{border:1px solid #ccc;border-radius:6px;padding:12px 0;margin-bottom:10px;box-shadow:2px 2px 2px #555}.Item h3{border-bottom:1px solid #222;padding:6px 12px;margin:0 18px}@media (max-width:600px){.Item h3{padding:6px 0}}.Item h4{margin-bottom:5px}.Item .Year{font-style:italic;font-size:14px;margin-bottom:10px}.Item .Summary{margin-bottom:5px}.hiddenContent{padding:15px 38px 0}.sampleSitesHeader{padding-bottom:20px;display:block}.site{padding:6px;border:1px solid #ddd;border-radius:6px;margin-bottom:20px;min-height:95px}.site .title{border-bottom:1px solid #222;font-weight:700;padding-bottom:4px;margin-bottom:4px;min-height:41px}@media print{.site span{display:none}}.site a{word-wrap:break-word}.smallCol{padding:0 5px}.adItem{padding-left:10px}@media (max-width:600px){.adItem{padding-left:0;padding-right:10px}}
+	</style>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>	
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script> -->
+	<!-- <script src="script/app.js"></script> -->
+	<script type="text/javascript">
+		angular.module("resumeApp",[]).controller("resumeCtrl",["$scope",function(e){e.titleMain="Matt Wojas Resume",e.address={},e.address.street="",e.address.city="Toronto",e.address.province="ON.",e.address.postal="",e.address.phone="416 802 7024",e.address.email="",e.educations=[{title:"Humber College",yearGraduate:"August 2010",programTitle:"Post Graduate Certificate in Web Development",Summary:"Studied Web, .Net, PHP, Wordpress, XHTML, CSS, C#, Javascript, AJAX, SQL, OOP, Web Accessibility, Design.",keyEvents:[{item:"Created Content Management Systems from scratch in PHP and .NET(C#)."},{item:"Studied modern web standards and best practices."}]},{title:"University of Toronto",yearGraduate:"June 2007",programTitle:"Honours Bachelor of Arts",Summary:"English Maj./History/Writing, Rhetoric & Critical Analysis ",keyEvents:[{item:"Honed research and communication skills."},{item:"Improved ability to process and analyze large amounts of information."}]}],e.experiences=[{title:"Architech",startDate:"2017-08-15",endDate:"Present",position:"Software Engineer",description:"Software Consultant for various projects",keyEvents:[{item:"Working in Python and React to Build new features and fix bugs on the Wave Accounting web application"},{item:"Using Git version control in a fast-paced, agile engineering environment"},{item:"Added automation testing framework to Jenkins build pipeline"},{item:"Unit and integration testing utilities (Jasmine, Enzyme) and methodologies"}]},{title:"A.K.A. New Media",startDate:"2010-12-03",endDate:"2017-08-03",position:"Front End Web Developer",description:"Built and maintained web properties and online presences; performed other IT duties.",keyEvents:[{item:"Studied and built professional, responsive, standards compliant, multi-lingual web sites and custom applications. (*see below for examples)"},{item:"Worked primarily with XHTML, CSS.*, SASS, LESS, Javascript, Jquery, AJAX, C#, SQL, Angular (v.1.x)."},{item:"Used Gulp, Node, Sublime Text, Git CLI, Cordova,  Sourcetree, IIS, Foundation, Bootstrap, Kentico (v.5-10), Photoshop, Google Maps API."},{item:"Ensured sites met standards(W3C), accessibility (AODA level A + AA), and SEO best practices."},{item:"Tested and configured sites for cross-browser and backwards compatibility."},{item:"Implemented various API integrations (Custom, Social Media, Spectrix, Google Maps, Miscrosoft Exchange API)."},{item:"Collaborated and communicated with design and account teams throughout all projects."},{item:"Interviewed, screened, and trained new hires.  Lead development of new projects."},{item:"Provided support on UX and UI for akaraisin (Software as a Service solution for fundraising)."}],sampleSites:[{title:"Hopeair",urls:[{url:"hopeair.ca"}],highlights:[{item:"Request a flight form single page application"}]},{title:"Canada Media Fund",urls:[{url:"cmf-fmc.ca"}],highlights:[{item:"Funded Projects Search"}]},{title:"Frontier College",urls:[{url:"frontiercollege.ca"}]},{title:"Women's College Hospital Foundation",urls:[{url:"wchf.ca"}]},{title:"DAS",urls:[{url:"das.ca"}]},{title:"Luminato Event Scheduler",urls:[{url:"luminatofestival.ca"}]},{title:"Hospitals of Regina Foundation",urls:[{url:"hrf.sk.ca"}]},{title:"Joseph Brant Hospital Foundation",urls:[{url:"jbhfoundation.ca"}]},{title:"Maple Leaf Sport's and Entertainment",urls:[{url:"mlsefoundation.org"},{url:"mlselaunchpad.org"},{url:"mlseteamupchallenge.com"}]},{title:"Chicken Farmers of Ontario",urls:[{url:"artisanalchicken.ca"},{url:"ontariochicken.ca"},{url:"specialtybreeds.ca"}]},{title:"Schneider Electric Motor Data Calculator",urls:[{url:"play.google.com/store/apps/details?id=com.schneiderelectric.motordatacalculatorus"}]}]},{title:"PopHire",startDate:"2010-11-01",endDate:"2011-04-01",position:"QA Analyst",description:"Analyze a start-up application for bugs, quality, and UX."},{title:"Sunrank",startDate:"2010-07-01",endDate:"2010-10-01",position:"Developer Intern",description:"Internship at Extreme Labs start-up incubator."},{title:"Victory Verbatim ",startDate:"2006-10-03",endDate:"2008-02-16",position:"Court Reporter ",description:"Coordinated and assisted Counsel with the audio recording and procedures of legal examinations.",keyEvents:[{item:"Gained exposure to Ontario Legislation in a legal environment."},{item:"Attended Arbitration Hearings, depositions, and examinations."},{item:"Edited and proofread legal transcripts for quality and accuracy."}]},{title:"wagi.ca ",startDate:"2006-02-03",endDate:"2009-06-16",position:"Research Assistant ",description:"In a part time position I assisted a senior real estate appraiser with report preparation and researching/analyzing data.",keyEvents:[{item:"Utilized a variety of real estate data base systems for searching, compiling and analyzing data. "},{item:"Inputting graphics. "}]},{title:"Centre for Addiction and Mental Health",startDate:"2005-06-01",endDate:"2006-06-01",position:"Volunteer Music Therapist",description:"During a one year volunteer position I initiated and spearheaded a music therapy program for patients.",keyEvents:[{item:"Organized interactive activities."},{item:"Communicated, explained, and taught musical concepts to patients."},{item:"Created a friendly and caring atmosphere for patients, enabling them to feel comfortable taking part in the program."}]}],e.experiencesPersonal=[{title:"Developer",startDate:"2010-12-03",endDate:"Present",position:"Hobby/Freelance Developer",description:"Personal and freelance projects.",keyEvents:[{item:"An environmental data monitoring application in Python on a Raspberry Pie"},{item:"A data logging application, which logged data to a MySql database displayed to a php backend/js frontend."},{item:"An application in angular and MySql to manage and store lunch places."},{item:"Configured cloud linux/apache web server for personal site and projects."},{item:"Worked on various freelance projects in static HTML, Wordpress, and Kentico."},{item:"Performed needs assessment and communication throughout project with clients."}]}]}]);
+	</script>
+</head>
+<body>
+	<main>
+		<header class="spacedVertUp spacedVertDown">
+			<div class="row ">
+				<div class="columns small-12 medium-6">
+					<h1>{{titleMain}}</h1>	
+				</div>				
+				<div class="columns small-12 medium-6 contactInfo">
+
+					<div class="street">
+						<span class="adItem" style="padding-left: 0">{{address.street}}</span>
+						<span class="adItem">{{address.city}}</span> 
+						<span class="adItem">{{address.province}}</span>
+						<span class="adItem" style="padding-left: 0">{{address.postal}}</span>		
+					</div>
+					
+					<div class="email">
+						<span class="adItem">{{address.phone}} </span>
+						<span class="adItem">{{address.email}}<a href='matt.wojas@gmail.com'>matt.wojas@gmail.com</a></span>	
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="education spacedVertUp">
+			<div class="row">
+				<div class="columns small-12">
+					<h2 class="sectionTitle">Education</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="educationItem Item columns small-12 " ng-repeat="education in educations">
+					<h3 class="showContent">{{education.title}}</h3>
+					<div class="hiddenContent">
+						<h4>{{education.programTitle}}</h4>						
+						<div class="Summary">{{education.Summary}}</div>
+						<div class="Year">Graduated {{education.yearGraduate}}</div>
+						<ul>
+							<li ng-repeat="event in education.keyEvents">{{event.item}}</li>
+						</ul>	
+					</div>
+					
+						
+				</div>					
+			</div>
+		</section>
+		<section class="experience spacedVertUp">
+			<div class="row ">
+				<div class="columns small-12">
+					<h2 class="sectionTitle">Professional Experience</h2>
+				</div>
+			</div>
+			<div class="row">			
+				<div class="experienceItem Item columns small-12" ng-repeat="experience in experiences | orderBy: 'experience.startDate':false">
+					<h3 class="showContent">{{experience.title}}</h3>
+					<div class="hiddenContent">
+						<h4>{{experience.position}}</h4>
+						<div class="Year">{{experience.startDate | date: 'longDate'}} - {{experience.endDate | date: 'longDate'}}</div
+						>
+						<p>{{experience.description}}</p>
+						<ul>
+							<li ng-repeat="event in experience.keyEvents">{{event.item}}</li>
+						</ul>
+						<strong class="sampleSitesHeader" ng-show="experience.sampleSites">*Recently built examples:</strong>
+						<div class="clear"></div>
+						<div ng-repeat="site in experience.sampleSites" class="sites columns smallCol small-12 medium-4 large-3 end">
+							<div class="site">
+								<div class="title">{{site.title}}</div>
+								<div ng-repeat="url in site.urls">
+									<a target="_blank" rel="noopener" href="http://{{url.url}}">	
+										<span>{{url.url}}</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>			
+			</div>
+		</section>
+		<section class="personal spacedVertUp">
+			<div class="row">
+				<div class="columns small-12">
+					<h2 class="sectionTitle">Personal Experience</h2>
+				</div>
+			</div>
+			<div class="row">			
+				<div class="experienceItem Item columns small-12" ng-repeat="experience in experiencesPersonal | orderBy : '-experience.startDate'">
+					<h3 class="showContent">{{experience.title}}</h3>
+					<div class="hiddenContent">
+						<h4>{{experience.position}}</h4>
+						<div class="Year">{{experience.startDate | date: 'longDate'}} - {{experience.endDate | date: 'longDate'}}</div
+						>
+						<p>{{experience.description}}</p>
+						<ul>
+							<li ng-repeat="event in experience.keyEvents">{{event.item}}</li>
+						</ul>
+					</div>
+				</div>			
+			</div>
+		</section>
+	</main>
+</body>
+</html>
