@@ -41,13 +41,14 @@
 				"title": "Architech",
 				"startDate":"2017-08-15",
 				"endDate": "Present",
-				"position": "Software Engineer",
+				"position": "Senior Software Engineer/Tech Lead",
 				"description" : "Software Consultant for various projects",
 				"keyEvents": [
-					{"item": "Working in Python and React to Build new features and fix bugs on the Wave Accounting web application"},
+					{"item": "Worked in Python and React to Build new features and fix bugs on the Wave Accounting web application"},
 					{"item": "Using Git version control in a fast-paced, agile engineering environment"},
 					{"item": "Added automation testing framework to Jenkins build pipeline"},
-					{"item": "Unit and integration testing utilities (Jasmine, Enzyme) and methodologies"},
+					{"item": "Unit and integration testing utilities (Jasmine, Enzyme, Selenium, Mocha) and methodologies"},
+					{"item": "Optimized mobiile performance of legacy website"},
 				]				
 			},
 			{
