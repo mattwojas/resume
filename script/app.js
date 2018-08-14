@@ -1,4 +1,21 @@
 (function(){
+	var prevTime = new Date(2017,7,15,0,0);  
+	var thisTime = new Date();   
+	
+	var diff = thisTime.getTime() - prevTime.getTime();   
+	
+	//daysSinceEmployed = parseFloat(Math.round(diff * 100) / 100).toFixed(2);
+	daysSinceEmployed = diff / (1000*60*60*24);
+
+
+	daysSinceEmployed = parseFloat(daysSinceEmployed).toFixed();
+	
+
+	console.log(diff);
+	console.log(thisTime +'-'+ prevTime);
+	console.log(daysSinceEmployed);
+	
+
 	var resumeApp = angular.module('resumeApp', []);
 
 	resumeApp.controller('resumeCtrl', ['$scope', function($scope){
@@ -40,7 +57,7 @@
 			{
 				"title": "Architech",
 				"startDate":"2017-08-15",
-				"endDate": "Present",
+				"endDate": 'Present' + ' (' + daysSinceEmployed + " days)",
 				"position": "Senior Software Engineer/Tech Lead",
 				"description" : "Software Consultant for various projects",
 				"keyEvents": [
