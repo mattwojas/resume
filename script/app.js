@@ -49,6 +49,7 @@
 					{"item": "Added automation testing framework to Jenkins build pipeline"},
 					{"item": "Unit and integration testing utilities (Jasmine, Enzyme, Selenium, Mocha) and methodologies"},
 					{"item": "Optimized mobiile performance of legacy website"},
+					{"item": "Lead a team in modernizing a legacy web application to a modern tech stack"},
 				]				
 			},
 			{
